@@ -1,0 +1,73 @@
+/* Import Montserrat from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+#main-div {
+    font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    background-color: #161b22;
+}
+/* General Styles */
+h1 {
+  color: white;
+  margin: 0;
+  padding: 20px;
+  background-color: #0d1117;
+  font-size: 24px;
+  font-weight: 700;
+  border-bottom: 1px solid #e1e4e8;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+h1>span {
+    float: right;
+    font-style: italic;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Styling each request block */
+ul div {
+  background-color: #232323;
+  border: 1px solid #e1e4e8;
+  border-radius: 5px;
+  padding: 16px;
+  margin-bottom: 8px;
+  margin-left: 25%;
+  margin-right: 25%;
+  transition: box-shadow 0.2s ease-in-out;
+}
+
+ul div:hover {
+  box-shadow: 0 1px 3px rgba(27, 31, 35, 0.12), 0 1px 2px rgba(27, 31, 35, 0.24);
+}
+
+/* Individual request items */
+li {
+  font-size: 14px;
+  color: white;
+  font-weight: 500; /* Medium weight for better readability */
+  list-style: none;
+}
+
+li span.action {
+  font-weight: bold;
+}
+
+li span.timestamp {
+    font-size: 12px;
+    margin-left: 1px;
+    font-weight: bold;
+}
+
+li.push {
+    color: #0969DA;
+}
+li.pull-request {
+    color: greenyellow;
+}
+
+li.merge {
+    color: yellow;
+}

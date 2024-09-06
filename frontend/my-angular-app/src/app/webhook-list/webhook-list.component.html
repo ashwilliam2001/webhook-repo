@@ -1,0 +1,17 @@
+<div id='main-div'>
+  <h1>GitHub Webhooks 
+    <span class="last-updated">Last Updated: {{ lastUpdated | date:'medium' }}</span></h1>
+  <ul>
+    <div *ngFor="let request of requests">
+      <li *ngIf="request.action === 'PUSH'" class="push">
+        "{{ request.author }}" pushed to "{{ request.to_branch }}" on <span class="timestamp">{{ request.timestamp }}</span>
+      </li>
+      <li *ngIf="request.action === 'PULL_REQUEST'" class="pull-request">
+        "{{ request.author }}" submitted a pull request from "{{ request.from_branch }}" to "{{ request.to_branch }}" on <span class="timestamp">{{ request.timestamp }}</span>
+      </li>
+      <li *ngIf="request.action === 'MERGE'" class="merge">
+        "{{ request.author }}" merged branch "{{ request.from_branch }}" to "{{ request.to_branch }}" on <span class="timestamp">{{ request.timestamp }}</span>
+      </li>
+    </div>
+  </ul>
+</div>
